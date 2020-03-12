@@ -53,14 +53,14 @@ public class TipFragment extends Fragment implements OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_distance, container, false);
+        View view = inflater.inflate(R.layout.fragment_tip, container, false);
 
         txtTipBill = (EditText)view.findViewById(R.id.BilleditText);
         txtTip = (EditText)view.findViewById(R.id.TipeditText);
         txtTipPeople = (EditText)view.findViewById(R.id.PeopleeditText);
 
-        //Button b = (Button)view.findViewById(R.id.btnTip);
-       // b.setOnClickListener( this );
+        Button b = (Button)view.findViewById(R.id.btnTip);
+        b.setOnClickListener( this );
 
         return view;
     }

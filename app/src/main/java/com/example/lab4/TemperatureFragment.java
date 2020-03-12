@@ -25,8 +25,8 @@ public class TemperatureFragment extends Fragment implements OnClickListener {
     @Override
     public void onClick(View v) {
 
-        String fString = txtTempteratureCelsius.getText().toString();
-        String cString = txtTempteratureFahrenheit.getText().toString();
+        String fString = txtTempteratureFahrenheit.getText().toString();
+        String cString = txtTempteratureCelsius.getText().toString();
 
         if (fString.equals("")) {
             if (!cString.equals("")) {
@@ -53,13 +53,13 @@ public class TemperatureFragment extends Fragment implements OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_distance, container, false);
+        View view = inflater.inflate(R.layout.fragment_temperature, container, false);
 
         txtTempteratureCelsius = (EditText)view.findViewById(R.id.CelsiuseditText);
         txtTempteratureFahrenheit = (EditText)view.findViewById(R.id.FahrenheiteditText);
 
-//        Button b = (Button)view.findViewById(R.id.btnTemperature);
-     //   b.setOnClickListener( this );
+        Button b = (Button)view.findViewById(R.id.btnTemperature);
+        b.setOnClickListener( this );
 
         return view;
     }
